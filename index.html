@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="shortcut icon" href="Imagens/key.ico" type="image/x-icon">
+        <link rel="stylesheet" href="style.css">
+        <title>Login</title>
+    </head>
+    <body>
+        <main>
+            <section>
+                <div class="form-img"></div>
+                <div class="form-content">
+                    <form action="script.js" method="POST" >
+                        <h1>
+                            Login
+                        </h1>
+                        <p>
+                            Bem-vindo(a) novamente, faça login para continuar.
+                        </p>
+                        <div class="form-content">
+                            <div>
+                                <label for="user-id">
+                                    <i class="material-icons" id="icons">person</i>
+                                    <input type="text" name="user" id="user-id" placeholder="Name" required autocomplete="name">
+                                </label>
+                            </div>
+                            <div>
+                                <label for="pass-id">
+                                    <i class="material-icons" id="icons">key</i>
+                                    <input type="password" name="pass" id="pass-id" placeholder="Password" required
+                                    autocomplete="current-password" minlength="8">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="button">
+                            <div>
+                                <button type="submit" class="submit-button">
+                                    Enviar
+                                </button>
+                            </div>
+                            <div>
+                                <button class="link-button">
+                                    <label for="link-id">
+                                        <a href="advice.html" target="_blank" id="link-id">
+                                            Esqueçeu a senha?
+                                        </a>
+                                    </label>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

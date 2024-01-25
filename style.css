@@ -1,0 +1,232 @@
+@media screen {
+    @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Montserrat&display=swap');
+
+    @font-face {
+        font-family:'Qanelas';
+        src: url('Fontes/QanelasDEMO-Black.otf') format('opentype');
+    }  
+    
+    :root {
+        /*Cores*/
+        --color-01:#49a09d;
+        --color-02:#5f2c82;
+        --color-03:#ffffff;
+        --color-04:#000000;
+        --color-05:#6cd3cf;
+        --color-06:#94cfcd;
+        --color-07:#377775;
+        --shadow: 14px 14px 10px #00000069;
+        
+        /* Fontes */
+        --font-01: 'Qanelas', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        --font-02:'Montserrat', sans-serif;
+    }
+
+    body {
+        background-color: var(--color-02);
+    }
+
+    main {
+        --center: 50%;
+        position: absolute;
+        top: var(--center);
+        left: var(--center);
+        transform: translate(
+            calc(var(--center)*-1),        
+            calc(var(--center)*-1)
+        );
+    }
+
+    main > section {
+        background-color: var(--color-03);
+        width: 80vw;
+        border-radius: 23px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        transition: width 0.3s, height 0.4s;
+    }
+
+
+    .form-img {
+        background-image: url('Imagens/buildings.jpg');
+        height: 206px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    form > h1 {
+        text-align: center;
+        font-family: var(--font-01);
+    }
+
+    form > p {
+        font-family: var(--font-02);
+        font-size: 0.9em;
+        padding: 0px 10px;
+        text-align: center;
+    }
+
+    .form-content, .button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-content > div {
+        --input-radius: 4px;
+        background-color: var(--color-02);
+        margin: 5px;
+        border: 1px solid var(--color-02);
+        padding: 1px;
+        border-radius: var(--input-radius);
+    }
+
+    .material-icons {
+        line-height: 0;
+    }
+
+    #icons {
+        margin: 0;
+        font-size: 28px;
+        color: var(--color-03);
+        transform: translate(2px,9px);
+        margin: 0px 0px;
+        margin-top: none;
+    }
+
+    .form-content input {
+        width: 50vw;
+        height: 20px;
+        font-size: 1.1em;
+        border: none;
+        border-radius: var(--input-radius);
+        background-color: var(--color-06);
+        padding: 3px;
+    }
+
+    .form-content input:hover {
+        background-color: var(--color-03);
+    }
+
+    button {
+        width: 60vw;
+        height: 40px;
+        font-family: var(--font-02);
+        font-size: 1.05em;
+        border: none;        
+        border-radius: 5px;
+    }
+
+    .submit-button {
+        background-color: var(--color-01);
+        color: var(--color-03);
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .submit-button:hover {
+        background-color: var(--color-05);
+    }
+
+    .link-button {
+        background-color: var(--color-03);
+        border: 2px solid var(--color-05);
+        margin-bottom: 10px;
+    }
+
+    .link-button a {
+        text-decoration: none;
+        color: var(--color-07);
+    }
+
+    .link-button:hover {
+        background-color: var(--color-05);
+    }
+}
+
+/*-----------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------- style for mobile devices with small screens ------------------------------------*/ 
+/*-----------------------------------------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 229px) {
+    /* must be equal min-width */
+    :root {
+        --width-mobile-small: 229px;
+    }
+
+    main > section {
+        width: calc(var(--width-mobile-small)*80/100);
+    }
+
+    .form-content input {
+        width: calc(var(--width-mobile-small)/2);
+    }
+
+    button {
+        width:calc(var(--width-mobile-small)*60/100);
+    }
+}
+
+/*---------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------- style for mobile devices with big screens ---------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------------*/
+
+@media screen and (min-width: 349px) and (max-width: 600px) {
+    /* must be equal min-width */
+    :root {
+        --width-mobile-big: 349px;
+    }
+
+    main > section {
+        width: calc(var(--width-mobile-big)*80/100);
+    }
+
+    .form-content input {
+        width: calc(var(--width-mobile-big)*50/100);
+    }
+
+    button {
+        width:calc(var(--width-mobile-big)*60/100);
+    }
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------- style for tablets ------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+@media screen and (min-width: 601px) and (max-width: 792px) {
+    * {
+        background-attachment: fixed;
+    }
+
+    :root {
+        --tablet-width: 681px;
+    }
+
+    body {
+        background-image: linear-gradient(
+            to top,
+            var(--color-01),
+            var(--color-02)
+        );
+    }
+
+    .form-img {
+        float: left;
+        width: 176px;
+        height: 312px;
+    }
+
+    main > section {
+        width: calc(var(--tablet-width)*80/100);
+    }
+
+    .form-content input {
+        width: calc(var(--tablet-width)*33.88/100);
+    }
+
+    button {
+        width: calc(var(--tablet-width)*43.41/100);
+    }
+}
