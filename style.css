@@ -279,11 +279,16 @@
     }
 
     .form-content input {
-        width: calc(var(--computer-width)*28.83/100);
         padding: 5px;
+        width: calc(
+            var(--computer-width)*28.83/100
+        );
+        
     }
 
     button {
-        width: calc(var(--computer-width)*33.87/100);
+        width: calc(
+            var(--computer-width)*33.87/100
+        );
     }
 }
