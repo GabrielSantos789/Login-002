@@ -6,7 +6,20 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="shortcut icon" href="Imagens/key.ico" type="image/x-icon">
         <link rel="stylesheet" href="style.css">
-        <title>Login</title>
+        <title>Sign</title>
+        <style>
+            @media screen and (min-width: 601px) and (max-width: 792px) {
+                .form-img {
+                    height: 344px;
+                }
+            }
+
+            @media screen and (min-width: 793px) {
+                .form-img {
+                    height: 344px;
+                }
+            }
+        </style>
     </head>
     <body>
         <main>
@@ -28,6 +41,14 @@
                                 </label>
                             </div>
                             <div>
+                                <label for="mail-id">
+                                    <i class="material-icons mail-style" id="icons">mail</i>
+                                    <label for="id-mail">
+                                        <input type="email" name="mail" id="id-mail" required placeholder="E-mail" autocomplete="email">
+                                    </label>
+                                </label>
+                            </div>
+                            <div>
                                 <label for="pass-id">
                                     <i class="material-icons" id="icons">key</i>
                                     <input type="password" name="pass" id="pass-id" placeholder="Password" required
@@ -44,8 +65,8 @@
                             <div>
                                 <button class="link-button">
                                     <label for="link-id">
-                                        <a href="sign.html" id="link-id">
-                                            Criar uma nova conta?
+                                        <a href="index.html" id="link-id">
+                                            já possui uma conta?
                                         </a>
                                     </label>
                                 </button>
